@@ -1,0 +1,39 @@
+<header id="mainNavbar" class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <div class="container">
+    <a class="navbar-brand mr-0 mr-md-2" href="{{ site.baseurl }}/" aria-label="{{ site.title | smartify }}">
+      POC generating docs using jekyll static site generator
+    </a>
+
+    <div class="navbar-nav-scroll mr-auto">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link{% if page.title == 'Base Images' %} active{% endif %}" href="{{ site.baseurl }}/Export%20Certificates/"
+             onclick="ga('send', 'event', 'Navbar', 'Community links', 'Base images');">Export Certificates</a>
+        </li>
+        <li class="nav-item{% if page.title == 'Project specific images' %} active{% endif %}">
+          <a class="nav-link" href="{{ site.baseurl }}/project-specific-images"
+             onclick="ga('send', 'event', 'Navbar', 'Community links', 'Project specific images');">Project specific
+            images</a>
+        </li>
+        <li class="nav-item dropdown{% if page.layout == 'environment' %} active{% endif %}">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+             aria-expanded="false">More API's <span class="caret"></span></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item{% if page.title == 'abc' %} active{% endif %}" href="{{ site.baseurl }}/abc">Overview</a>
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header">Products</h6>
+            <a class="dropdown-item{% if page.title == 'def' %} active{% endif %}" href="{{ site.baseurl }}/def">exp-products-api</a>
+            <a class="dropdown-item{% if page.title == 'efg' %} active{% endif %}" href="{{ site.baseurl }}/efg">sys-sap-products-api</a>
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header">Samples</h6>
+            <a class="dropdown-item{% if page.title == 'ghi' %} active{% endif %}" href="{{ site.baseurl }}/ghi">exp-xxx-api</a>
+            <a class="dropdown-item{% if page.title == 'klm' %} active{% endif %}" href="{{ site.baseurl }}/klm">prc-xxx-api</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link{% if page.title == 'About us' %} active{% endif %}" href="{{ site.baseurl }}/about">About us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
